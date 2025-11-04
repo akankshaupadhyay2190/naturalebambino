@@ -10,7 +10,7 @@
     body {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
-      color: #3c2e13; /* Darker brown for text */
+      color: #50411d; /* Darker brown for text */
       background: 
         url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
         linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
@@ -23,37 +23,27 @@
       padding: 40px 12px 17px 12px;
       border-bottom: 2px solid #ead793;
       box-shadow: 0 3px 16px #ecd9ac67;
-      position: relative;
-    }
-    .floral-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 18px;
-      margin-bottom: 0.2em;
-    }
-    .floral-svg {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
-      opacity: 0.92;
     }
     header h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.6rem;
+      font-size: 3rem;
       letter-spacing: 2px;
-      color: #6a4f11; /* Even darker golden-brown */
+      color: #836316; /* Darker golden-brown */
       margin: 0 0 10px 0;
       font-weight: 700;
       text-shadow: 0 2px 4px #f5e7bc90;
-      background: none;
+    }
+    /* Header flower style for larger size & leafy feel */
+    .header-flower {
+      font-size: 2.1rem;
+      vertical-align: -0.2em;
+      margin: 0 8px;
     }
     header p {
       font-family: 'Great Vibes', cursive;
       font-size: 1.7rem;
-      color: #7c551d;
+      color: #997135; /* Darker brown for tagline */
       margin: 0;
-      margin-bottom: 6px;
       letter-spacing: 1px;
       text-shadow: 0 1px 2px #fffbe4c2;
     }
@@ -67,7 +57,7 @@
     }
     nav a {
       text-decoration: none;
-      color: #4e330b; /* Strong dark brown */
+      color: #704a18; /* Dark bold brown */
       font-size: 1.17rem;
       font-weight: bold;
       padding: 8px 18px;
@@ -103,7 +93,7 @@
       text-shadow: 0 2px 5px #f8eab089;
     }
     main p {
-      color: #3c2e13; /* same as main body text */
+      color: #50411d; /* Same as main body text */
       font-size: 1.13rem;
       line-height: 1.6;
       font-family: 'Cormorant Garamond', serif;
@@ -124,51 +114,16 @@
     @media (max-width: 700px) {
       main { max-width: 96vw; padding: 18px 6vw 23px 6vw; }
       nav { gap: 18px; }
-      header h1 { font-size: 1.4rem; }
-      .floral-svg { width: 30px; height: 30px; }
-      header p { font-size: 1.07rem; }
+      header h1 { font-size: 2.1rem; }
+      header p { font-size: 1.08rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="floral-header">
-      
-      <svg class="floral-svg" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <ellipse cx="30" cy="30" rx="8" ry="8" fill="#fffbe7"/>
-        <ellipse cx="30" cy="30" rx="5" ry="5" fill="#ffe072"/>
-        <g stroke="#b7b636" stroke-width="2">
-          <path d="M30 22 L30 8"/>
-          <path d="M30 38 L30 52"/>
-          <path d="M22 30 L8 30"/>
-          <path d="M38 30 L52 30"/>
-          <path d="M38 38 L50 50"/>
-          <path d="M22 38 L10 50"/>
-          <path d="M38 22 L50 10"/>
-          <path d="M22 22 L10 10"/>
-        </g>
-        
-        <path d="M8 30 C7 38, 14 37, 14 33" stroke="#7cb185" stroke-width="2" fill="none"/>
-      </svg>
-      <h1> Naturale Bambino </h1>
-      
-      <svg class="floral-svg" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-        <ellipse cx="30" cy="30" rx="8" ry="8" fill="#fffbe7"/>
-        <ellipse cx="30" cy="30" rx="5" ry="5" fill="#ffe072"/>
-        <g stroke="#b7b636" stroke-width="2">
-          <path d="M30 22 L30 8"/>
-          <path d="M30 38 L30 52"/>
-          <path d="M22 30 L8 30"/>
-          <path d="M38 30 L52 30"/>
-          <path d="M38 38 L50 50"/>
-          <path d="M22 38 L10 50"/>
-          <path d="M38 22 L50 10"/>
-          <path d="M22 22 L10 10"/>
-        </g>
-        
-        <path d="M52 30 C53 38, 46 37, 46 33" stroke="#7cb185" stroke-width="2" fill="none"/>
-      </svg>
-    </div>
+    <h1>
+      <span class="header-flower">💐</span> Naturale Bambino <span class="header-flower">💐</span>
+    </h1>
     <p>Gentle, Natural, and Loving Care for Your Little One</p>
   </header>
 
