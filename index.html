@@ -11,7 +11,6 @@
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
       color: #725c39;
-      /* Vintage floral wallpaper background */
       background: 
         url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
         linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
@@ -93,54 +92,68 @@
       font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
     }
-    /* Highlights Section */
-    .highlights-section {
-      margin: 2.3em 0 0.3em 0;
+    /* Featured Section Styles */
+    .featured-sections {
+      margin: 2.5em 0 2em 0;
+      background: #fff8e6bc;
+      padding: 2em 1em 1em 1em;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px #f3e3b426;
+      text-align: left;
+      max-width: 490px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .highlights-title {
-      color:#997135;
-      font-size:1.33rem;
-      margin-bottom: 1em;
-      letter-spacing: 0.5px;
+    .featured-sections h3 {
+      color: #b59351;
+      font-size: 1.33rem;
       font-family: 'Cormorant Garamond', serif;
+      margin-bottom: 1em;
       font-weight: bold;
+      text-align: center;
+      letter-spacing: 0.3px;
     }
-    .highlights-cards {
+    .featured-list {
       display: flex;
-      gap: 1.2em;
-      justify-content: center;
       flex-wrap: wrap;
+      gap: 1.1em;
+      justify-content: center;
+      margin-top: 1em;
     }
-    .highlight-card {
-      background: #fff8e5a0;
+    .featured-item {
+      flex-basis: 195px;
+      background: #fffbeace;
+      padding: 1em 0.7em 0.8em 0.7em;
       border-radius: 9px;
-      padding: 1.1em 1.3em;
-      width: 230px;
-      min-height: 122px;
-      box-shadow: 0 4px 18px #f3e3b466;
+      box-shadow: 0 2px 12px #f3e3b426;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 1em;
+      align-items: flex-start;
+      gap: 0.7em;
     }
-    .highlight-card strong {
-      color: #b8975e;
-      font-size: 1.13rem;
-      letter-spacing: 0.2px;
+    .featured-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      margin-top: 1px;
     }
-    .highlight-card p {
+    .featured-text {
+      font-size: 1.02rem;
       color: #725c39;
-      margin:0.6em 0 0 0;
-      font-size:1em;
       font-family: 'Cormorant Garamond', serif;
+    }
+    .featured-title {
+      color: #9c7e37;
+      font-size: 1.11rem;
+      font-weight: 600;
+      margin-bottom: 0.17em;
     }
     @media (max-width: 700px) {
       main { max-width: 96vw; padding: 18px 6vw 23px 6vw; }
       nav { gap: 18px; }
       header h1 { font-size: 2.1rem; }
       header p { font-size: 1.08rem; }
-      .highlights-cards { flex-direction: column; align-items: center;}
-      .highlight-card { width:90%; }
+      .featured-list { flex-direction: column; align-items: stretch;}
+      .featured-item { flex-basis: unset; }
+      .featured-sections { padding: 1.3em 0.5em 0.8em 0.5em;}
     }
     footer {
       background: #f8edc6e6;
@@ -179,24 +192,41 @@
     </p>
 
     
-    <section class="highlights-section">
-      <div class="highlights-title">🌱 Highlights This Month</div>
-      <div class="highlights-cards">
-        <div class="highlight-card">
-          <strong>🛁 Gentle Bath Routines</strong>
-          <p>Discover calming evening routines to soothe your baby.</p>
+    <section class="featured-sections">
+      <h3>What You'll Find Here</h3>
+      <div class="featured-list">
+        <div class="featured-item">
+          <span class="featured-icon">🍼</span>
+          <div class="featured-text">
+            <div class="featured-title">Gentle Routines</div>
+            Reliable everyday habits for peaceful, healthy development.
+          </div>
         </div>
-        <div class="highlight-card">
-          <strong>🌼 Natural Remedies</strong>
-          <p>Explore gentle herbal soothers like calendula and chamomile.</p>
+        <div class="featured-item">
+          <span class="featured-icon">🌿</span>
+          <div class="featured-text">
+            <div class="featured-title">Natural Remedies</div>
+            Safe herbal tips, soothers, and remedies for common concerns.
+          </div>
         </div>
-        <div class="highlight-card">
-          <strong>🌷 Parent Voices</strong>
-          <p>Read real stories from gentle parents around the world.</p>
+        <div class="featured-item">
+          <span class="featured-icon">🤱</span>
+          <div class="featured-text">
+            <div class="featured-title">Parent Stories</div>
+            Heartfelt journeys and real-life experiences from parents.
+          </div>
+        </div>
+        <div class="featured-item">
+          <span class="featured-icon">💬</span>
+          <div class="featured-text">
+            <div class="featured-title">Emotional Support</div>
+            Encouragement, empathy, and community for your parenting path.
+          </div>
         </div>
       </div>
     </section>
     
+
   </main>
 
   <footer>
