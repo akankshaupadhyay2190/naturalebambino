@@ -4,58 +4,122 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naturale Bambino | Gentle Care for Babies</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Dancing+Script:700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --chamomile-yellow: #fff9e3;
+      --chamomile-cream: #fef7d2;
+      --calendula-peach: #fff4e1;
+      --calendula-orange: #ffe3b3;
+      --herb-green: #acc9ae;
+      --stem-green: #bcd3b1;
+      --link-green: #4d7b46;
+      --nav-hover: #f5d4a5;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Quicksand', Arial, sans-serif;
       margin: 0;
-      background-color: #fefcf9;
+      background: linear-gradient(150deg, var(--chamomile-yellow) 0%, var(--calendula-peach) 100%);
       color: #333;
     }
     header {
-      background-color: #d2e8cf;
-      padding: 20px;
+      background-color: var(--stem-green);
+      padding: 32px 20px 18px 20px;
       text-align: center;
+      border-bottom: 3px solid var(--calendula-orange);
+    }
+    header h1 {
+      font-family: 'Quicksand', serif;
+      font-size: 2.8rem;
+      color: #e7b45b;
+      letter-spacing: 2px;
+      margin: 0 0 12px 0;
+      text-shadow: 1px 2px 0 #fef7d2;
+    }
+    header p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      color: #944d1c;
+      margin: 0;
+      letter-spacing: 0.5px;
     }
     nav {
-      background-color: #b6d7a8;
+      background: linear-gradient(90deg, var(--chamomile-cream) 0%, var(--calendula-orange) 100%);
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      gap: 34px;
+      padding: 14px;
+      border-bottom: 1.5px solid var(--herb-green);
     }
     nav a {
       text-decoration: none;
-      color: #333;
-      font-weight: bold;
+      color: var(--link-green);
+      font-weight: 900;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      padding: 6px 18px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      box-shadow: 1px 2px 5px #fff9e36a;
     }
     nav a:hover {
-      color: #2d572c;
+      background: var(--nav-hover);
+      color: #b76b17;
+      box-shadow: 2px 4px 12px #ffd69469;
     }
     main {
-      padding: 40px;
+      padding: 48px 20px;
       text-align: center;
     }
+    main h2 {
+      color: #ffb850;
+      font-size: 2rem;
+      margin-bottom: 16px;
+      letter-spacing: 0.8px;
+    }
     footer {
-      background-color: #d2e8cf;
+      background-color: var(--stem-green);
       text-align: center;
-      padding: 15px;
+      padding: 15px 0;
       position: relative;
       bottom: 0;
       width: 100%;
+      border-top: 2.5px solid var(--calendula-orange);
+    }
+    footer p {
+      margin: 0;
+      color: #855715;
+      letter-spacing: 0.5px;
+      font-size: 1rem;
+    }
+    /* Extra gentle floral effect: */
+    body::before {
+      content: "";
+      position: fixed;
+      z-index: 0;
+      pointer-events: none;
+      inset: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      opacity: 0.09;
+    }
+    main, header, nav, footer {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🌿 Naturale Bambino 🌿</h1>
+    <h1>🌼 Naturale Bambino 🌼</h1>
     <p>Gentle, Natural, and Loving Care for Your Little One</p>
   </header>
 
-  <<nav>
-  <a href="index.html">Home</a>
-  <a href="care.html">Care Tips</a>
-  <a href="Parents_Stories.html">Parents Stories</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="care.html">Care Tips</a>
+    <a href="Parents_Stories.html">Parents Stories</a>
+  </nav>
 
   <main>
     <h2>Welcome to Naturale Bambino</h2>
