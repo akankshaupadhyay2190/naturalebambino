@@ -5,107 +5,111 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Naturale Bambino | Gentle Care for Babies</title>
   
-  <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Dancing+Script:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --chamomile-yellow: #fff9e3;
-      --chamomile-cream: #fef7d2;
-      --calendula-peach: #fff4e1;
-      --calendula-orange: #ffe3b3;
-      --herb-green: #acc9ae;
-      --stem-green: #bcd3b1;
-      --link-green: #4d7b46;
-      --nav-hover: #f5d4a5;
-    }
     body {
-      font-family: 'Quicksand', Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(150deg, var(--chamomile-yellow) 0%, var(--calendula-peach) 100%);
-      color: #333;
+      font-family: 'Cormorant Garamond', serif;
+      color: #725c39;
+      /* Vintage floral wallpaper background */
+      background: 
+        url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
+        linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
     }
     header {
-      background-color: var(--stem-green);
-      padding: 32px 20px 18px 20px;
+      background: rgba(255, 251, 240, 0.9);
       text-align: center;
-      border-bottom: 3px solid var(--calendula-orange);
+      padding: 40px 12px 17px 12px;
+      border-bottom: 2px solid #ead793;
+      box-shadow: 0 3px 16px #ecd9ac67;
     }
     header h1 {
-      font-family: 'Quicksand', serif;
-      font-size: 2.8rem;
-      color: #e7b45b;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
       letter-spacing: 2px;
-      margin: 0 0 12px 0;
-      text-shadow: 1px 2px 0 #fef7d2;
+      color: #b8975e;
+      margin: 0 0 10px 0;
+      font-weight: 700;
+      text-shadow: 0 2px 4px #fffbe4a2;
     }
     header p {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.6rem;
-      color: #944d1c;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.7rem;
+      color: #c88e4a;
       margin: 0;
-      letter-spacing: 0.5px;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 2px #fffbe4c2;
     }
     nav {
-      background: linear-gradient(90deg, var(--chamomile-cream) 0%, var(--calendula-orange) 100%);
+      background: #f8edc6e6;
+      border-bottom: 1.5px solid #dbc47e;
       display: flex;
       justify-content: center;
-      gap: 34px;
-      padding: 14px;
-      border-bottom: 1.5px solid var(--herb-green);
+      padding: 12px 0;
+      gap: 32px;
     }
     nav a {
       text-decoration: none;
-      color: var(--link-green);
-      font-weight: 900;
-      font-size: 1.15rem;
-      letter-spacing: 0.5px;
-      padding: 6px 18px;
+      color: #b18037;
+      font-size: 1.17rem;
+      font-weight: bold;
+      padding: 8px 18px;
       border-radius: 6px;
-      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-      box-shadow: 1px 2px 5px #fff9e36a;
+      background: #fffbea80;
+      box-shadow: 0 2px 8px #ead7931c;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, color 0.19s, box-shadow 0.19s;
+      border: 1px solid #f5e7bc;
     }
     nav a:hover {
-      background: var(--nav-hover);
-      color: #b76b17;
-      box-shadow: 2px 4px 12px #ffd69469;
+      background: #ffedbb;
+      color: #b4812e;
+      box-shadow: 0 2px 8px #e8c68680;
+      border-color: #daba6b;
     }
     main {
-      padding: 48px 20px;
+      background: rgba(255, 251, 232, 0.95);
+      margin: 38px auto 28px auto;
+      max-width: 620px;
+      box-shadow: 0 6px 36px #ecd9ac41;
+      border-radius: 14px;
+      padding: 38px 24px 40px 24px;
       text-align: center;
     }
     main h2 {
-      color: #ffb850;
-      font-size: 2rem;
-      margin-bottom: 16px;
-      letter-spacing: 0.8px;
+      color: #b0894d;
+      font-size: 2.2rem;
+      margin-bottom: 13px;
+      margin-top: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+    }
+    main p {
+      color: #7e643c;
+      font-size: 1.11rem;
+      line-height: 1.6;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
     }
     footer {
-      background-color: var(--stem-green);
+      background: #f8edc6e6;
       text-align: center;
-      padding: 15px 0;
-      position: relative;
-      bottom: 0;
-      width: 100%;
-      border-top: 2.5px solid var(--calendula-orange);
-    }
-    footer p {
-      margin: 0;
-      color: #855715;
+      padding: 15px 0 8px 0;
+      font-family: 'Cormorant Garamond', serif;
+      color: #a98a50;
+      font-size: 1.04rem;
+      border-top: 1.5px solid #ead793;
       letter-spacing: 0.5px;
-      font-size: 1rem;
+      margin-top: 36px;
     }
-    /* Extra gentle floral effect: */
-    body::before {
-      content: "";
-      position: fixed;
-      z-index: 0;
-      pointer-events: none;
-      inset: 0;
-      background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-      opacity: 0.09;
-    }
-    main, header, nav, footer {
-      position: relative;
-      z-index: 1;
+    /* Responsive improvements */
+    @media (max-width: 700px) {
+      main { max-width: 96vw; padding: 18px 6vw 23px 6vw; }
+      nav { gap: 18px; }
+      header h1 { font-size: 2.1rem; }
+      header p { font-size: 1.08rem; }
     }
   </style>
 </head>
