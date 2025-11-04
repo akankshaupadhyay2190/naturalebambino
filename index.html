@@ -6,6 +6,9 @@
   <title>Naturale Bambino | Gentle Care for Babies</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+    html {
+      font-size: 20px; /* Base font size (was 16px) */
+    }
     body {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
@@ -17,26 +20,26 @@
       min-height: 100vh;
     }
     header {
-      background: rgba(255, 251, 240, 0.9);
+      background: rgba(255, 251, 240, 0.93);
       text-align: center;
-      padding: 40px 12px 17px 12px;
+      padding: 2.1em 0.7em 1.1em 0.7em;
       border-bottom: 2px solid #ead793;
       box-shadow: 0 3px 16px #ecd9ac67;
     }
     header h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3rem;
-      letter-spacing: 2px;
+      font-size: 2.8rem; /* ~56px */
+      letter-spacing: 2.5px;
       color: #b8975e;
-      margin: 0 0 10px 0;
+      margin: 0 0 0.45em 0;
       font-weight: 700;
       text-shadow: 0 2px 4px #fffbe4a2;
     }
     header p {
       font-family: 'Great Vibes', cursive;
-      font-size: 1.7rem;
+      font-size: 2rem;
       color: #c88e4a;
-      margin: 0;
+      margin: 0 0 0.3em 0;
       letter-spacing: 1px;
       text-shadow: 0 1px 2px #fffbe4c2;
     }
@@ -45,15 +48,15 @@
       border-bottom: 1.5px solid #dbc47e;
       display: flex;
       justify-content: center;
-      padding: 12px 0;
-      gap: 32px;
+      padding: 0.85em 0;
+      gap: 2.2em;
     }
     nav a {
       text-decoration: none;
       color: #b18037;
-      font-size: 1.17rem;
+      font-size: 1.25rem;
       font-weight: bold;
-      padding: 8px 18px;
+      padding: 0.5em 1.4em;
       border-radius: 6px;
       background: #fffbea80;
       box-shadow: 0 2px 8px #ead7931c;
@@ -68,21 +71,22 @@
       border-color: #daba6b;
     }
     main {
-      background: rgba(255, 251, 232, 0.95);
-      margin: 38px auto 28px auto;
-      max-width: 620px;
+      background: rgba(255, 251, 232, 0.96);
+      margin: 2.5em auto 2em auto;
+      /* increased max-width for wider look */
+      max-width: 900px;
       box-shadow: 0 6px 36px #ecd9ac41;
-      border-radius: 14px;
-      padding: 38px 24px 40px 24px;
+      border-radius: 20px;
+      padding: 3em 2em 3em 2em;
       text-align: center;
     }
     .baby-photo {
       display: block;
-      margin: 24px auto 22px auto;
-      border-radius: 18px;
+      margin: 1.5em auto 1.4em auto;
+      border-radius: 1.2em;
       box-shadow: 0 6px 32px #e5cb9b38, 0 1.5px 4px #ead79344;
-      width: 180px;
-      max-width: 82vw;
+      width: 240px;
+      max-width: 90vw;
       aspect-ratio: 4/3;
       object-fit: cover;
       border: 2px solid #ead793;
@@ -90,92 +94,102 @@
     }
     main h2 {
       color: #b0894d;
-      font-size: 2.2rem;
-      margin-bottom: 13px;
+      font-size: 2.4rem;
+      margin-bottom: 0.7em;
       margin-top: 0;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.18;
     }
     main p {
       color: #7e643c;
-      font-size: 1.11rem;
-      line-height: 1.6;
+      font-size: 1.25rem;
+      line-height: 1.7;
       font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
+      margin-bottom: 1.3em;
+      margin-top: 0.3em;
     }
     .featured-sections {
-      margin: 2.5em 0 2em 0;
+      margin: 3em 0 2em 0;
       background: #fff8e6bc;
-      padding: 2em 1em 1em 1em;
-      border-radius: 12px;
+      padding: 2.5em 2em 2em 2em;
+      border-radius: 16px;
       box-shadow: 0 2px 16px #f3e3b426;
       text-align: left;
-      max-width: 490px;
+      max-width: 700px; /* wider than before */
       margin-left: auto;
       margin-right: auto;
     }
     .featured-sections h3 {
       color: #b59351;
-      font-size: 1.33rem;
+      font-size: 1.6rem;
       font-family: 'Cormorant Garamond', serif;
-      margin-bottom: 1em;
+      margin-bottom: 1.3em;
       font-weight: bold;
       text-align: center;
-      letter-spacing: 0.3px;
+      letter-spacing: 0.5px;
     }
     .featured-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.1em;
+      gap: 1.4em;
       justify-content: center;
-      margin-top: 1em;
+      margin-top: 1.1em;
     }
     .featured-item {
-      flex-basis: 195px;
+      flex-basis: 250px;
       background: #fffbeace;
-      padding: 1em 0.7em 0.8em 0.7em;
-      border-radius: 9px;
+      padding: 1.3em 1.2em 1.1em 1.1em;
+      border-radius: 11px;
       box-shadow: 0 2px 12px #f3e3b426;
       display: flex;
       align-items: flex-start;
-      gap: 0.7em;
+      gap: 0.9em;
+      min-width: 210px;
     }
     .featured-icon {
-      font-size: 2rem;
+      font-size: 2.4rem;
       flex-shrink: 0;
       margin-top: 1px;
     }
     .featured-text {
-      font-size: 1.02rem;
+      font-size: 1.14rem;
       color: #725c39;
       font-family: 'Cormorant Garamond', serif;
     }
     .featured-title {
       color: #9c7e37;
-      font-size: 1.11rem;
+      font-size: 1.25rem;
       font-weight: 600;
-      margin-bottom: 0.17em;
+      margin-bottom: 0.2em;
+    }
+    @media (max-width: 970px) {
+      main { max-width: 99vw; }
+      .featured-sections { max-width:96vw; }
     }
     @media (max-width: 700px) {
-      main { max-width: 96vw; padding: 18px 6vw 23px 6vw; }
-      nav { gap: 18px; }
-      header h1 { font-size: 2.1rem; }
-      header p { font-size: 1.08rem; }
+      html { font-size: 18px; }
+      main { padding: 1em 3vw 2em 3vw; }
       .featured-list { flex-direction: column; align-items: stretch;}
-      .featured-item { flex-basis: unset; }
-      .featured-sections { padding: 1.3em 0.5em 0.8em 0.5em;}
-      .baby-photo { width: 120px; }
+      .featured-item { flex-basis: unset; min-width:0;}
+      .featured-sections { padding: 1.5em 2vw; }
+      .baby-photo { width: 80vw; }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1.2rem; }
+      nav a { font-size: 1.09rem; padding: 0.7em 0.9em;}
     }
     footer {
       background: #f8edc6e6;
       text-align: center;
-      padding: 15px 0 8px 0;
+      padding: 1.1em 0 0.6em 0;
       font-family: 'Cormorant Garamond', serif;
       color: #a98a50;
-      font-size: 1.04rem;
+      font-size: 1.05rem;
       border-top: 1.5px solid #ead793;
       letter-spacing: 0.5px;
-      margin-top: 36px;
+      margin-top: 2.2em;
     }
   </style>
 </head>
@@ -199,19 +213,16 @@
       and safe for your little one.
     </p>
 
-    
     <img
       src="https://images.unsplash.com/photo-1589561084283-930aa7b1bebb?auto=format&fit=crop&w=400&q=80"
       alt="A happy baby taking a bath in a white bathtub"
       class="baby-photo"
     />
-    
 
     <p>
       Explore our care tips to learn more about keeping your baby happy and healthy.
     </p>
 
-    
     <section class="featured-sections">
       <h3>What You'll Find Here</h3>
       <div class="featured-list">
@@ -245,8 +256,6 @@
         </div>
       </div>
     </section>
-    
-
   </main>
 
   <footer>
