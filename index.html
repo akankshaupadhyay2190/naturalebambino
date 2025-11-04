@@ -93,6 +93,55 @@
       font-family: 'Cormorant Garamond', serif;
       font-weight: 400;
     }
+    /* Highlights Section */
+    .highlights-section {
+      margin: 2.3em 0 0.3em 0;
+    }
+    .highlights-title {
+      color:#997135;
+      font-size:1.33rem;
+      margin-bottom: 1em;
+      letter-spacing: 0.5px;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: bold;
+    }
+    .highlights-cards {
+      display: flex;
+      gap: 1.2em;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .highlight-card {
+      background: #fff8e5a0;
+      border-radius: 9px;
+      padding: 1.1em 1.3em;
+      width: 230px;
+      min-height: 122px;
+      box-shadow: 0 4px 18px #f3e3b466;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1em;
+    }
+    .highlight-card strong {
+      color: #b8975e;
+      font-size: 1.13rem;
+      letter-spacing: 0.2px;
+    }
+    .highlight-card p {
+      color: #725c39;
+      margin:0.6em 0 0 0;
+      font-size:1em;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    @media (max-width: 700px) {
+      main { max-width: 96vw; padding: 18px 6vw 23px 6vw; }
+      nav { gap: 18px; }
+      header h1 { font-size: 2.1rem; }
+      header p { font-size: 1.08rem; }
+      .highlights-cards { flex-direction: column; align-items: center;}
+      .highlight-card { width:90%; }
+    }
     footer {
       background: #f8edc6e6;
       text-align: center;
@@ -103,13 +152,6 @@
       border-top: 1.5px solid #ead793;
       letter-spacing: 0.5px;
       margin-top: 36px;
-    }
-    /* Responsive improvements */
-    @media (max-width: 700px) {
-      main { max-width: 96vw; padding: 18px 6vw 23px 6vw; }
-      nav { gap: 18px; }
-      header h1 { font-size: 2.1rem; }
-      header p { font-size: 1.08rem; }
     }
   </style>
 </head>
@@ -135,6 +177,26 @@
     <p>
       Explore our care tips to learn more about keeping your baby happy and healthy.
     </p>
+
+    
+    <section class="highlights-section">
+      <div class="highlights-title">🌱 Highlights This Month</div>
+      <div class="highlights-cards">
+        <div class="highlight-card">
+          <strong>🛁 Gentle Bath Routines</strong>
+          <p>Discover calming evening routines to soothe your baby.</p>
+        </div>
+        <div class="highlight-card">
+          <strong>🌼 Natural Remedies</strong>
+          <p>Explore gentle herbal soothers like calendula and chamomile.</p>
+        </div>
+        <div class="highlight-card">
+          <strong>🌷 Parent Voices</strong>
+          <p>Read real stories from gentle parents around the world.</p>
+        </div>
+      </div>
+    </section>
+    
   </main>
 
   <footer>
