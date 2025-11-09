@@ -4,46 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Baby Care Tips | Naturale Bambino</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+    html {
+      font-size: 20px;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fefcf9;
-      color: #333;
+      font-family: 'Cormorant Garamond', serif;
+      color: #725c39;
+      background: 
+        url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
+        linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
     }
     header {
-      background-color: #d2e8cf;
-      padding: 20px;
+      background: rgba(255, 251, 240, 0.93);
       text-align: center;
+      padding: 2.1em 0.7em 1.1em 0.7em;
+      border-bottom: 2px solid #ead793;
+      box-shadow: 0 3px 16px #ecd9ac67;
+    }
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      letter-spacing: 2.5px;
+      color: #b8975e;
+      margin: 0 0 0.45em 0;
+      font-weight: 700;
+      text-shadow: 0 2px 4px #fffbe4a2;
+    }
+    header p {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #c88e4a;
+      margin: 0 0 0.3em 0;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 2px #fffbe4c2;
     }
     nav {
-      background-color: #b6d7a8;
+      background: #f8edc6e6;
+      border-bottom: 1.5px solid #dbc47e;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      padding: 0.85em 0;
+      gap: 2.2em;
     }
     nav a {
       text-decoration: none;
-      color: #333;
+      color: #b18037;
+      font-size: 1.25rem;
       font-weight: bold;
+      padding: 0.5em 1.4em;
+      border-radius: 6px;
+      background: #fffbea80;
+      box-shadow: 0 2px 8px #ead7931c;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, color 0.19s, box-shadow 0.19s;
+      border: 1px solid #f5e7bc;
     }
     nav a:hover {
-      color: #2d572c;
+      background: #ffedbb;
+      color: #b4812e;
+      box-shadow: 0 2px 8px #e8c68680;
+      border-color: #daba6b;
     }
     main {
-      padding: 40px;
+      background: rgba(255, 251, 232, 0.96);
+      margin: 2.5em auto 2em auto;
+      max-width: 900px;
+      box-shadow: 0 6px 36px #ecd9ac41;
+      border-radius: 20px;
+      padding: 3em 2em 3em 2em;
+      text-align: center;
     }
-    section {
-      margin-bottom: 30px;
+    .tip-section {
+      background: #fff8e6bc;
+      margin: 2.6em auto 1em auto;
+      padding: 2.2em 2em 2em 2em;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px #f3e3b426;
+      max-width: 700px;
+      text-align: left;
+    }
+    .tip-section h2 {
+      color: #b0894d;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 0.7em;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+    }
+    .tip-section h2 span {
+      font-size: 2.1rem;
+      margin-top: 2px;
+    }
+    .tip-section p {
+      color: #7e643c;
+      font-size: 1.22rem;
+      line-height: 1.7;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      margin: 0.7em 0 0.6em 0;
+    }
+    .content-placeholder {
+      background: #fffcefd0;
+      color: #baa05c;
+      font-size: 1.08rem;
+      font-style: italic;
+      border: 1.5px dashed #e2c570;
+      border-radius: 7px;
+      padding: 0.9em 1em;
+      text-align: left;
+      margin: 1.4em 0 0 0;
+    }
+    @media (max-width: 970px) {
+      main { max-width: 99vw; }
+      .tip-section { max-width:96vw; }
+    }
+    @media (max-width: 700px) {
+      html { font-size: 18px; }
+      main { padding: 1em 3vw 2em 3vw; }
+      .tip-section { padding: 1.5em 2vw; }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1.15rem; }
+      nav a { font-size: 1.09rem; padding: 0.7em 0.9em;}
     }
     footer {
-      background-color: #d2e8cf;
+      background: #f8edc6e6;
       text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      padding: 1.1em 0 0.6em 0;
+      font-family: 'Cormorant Garamond', serif;
+      color: #a98a50;
+      font-size: 1.05rem;
+      border-top: 1.5px solid #ead793;
+      letter-spacing: 0.5px;
+      margin-top: 2.2em;
     }
   </style>
 </head>
@@ -60,19 +160,11 @@
   </nav>
 
   <main>
-    <section>
-      <h2>👶 Gentle Bath Time</h2>
-      <p>Use mild, fragrance-free soaps. Keep bath time short and fun — about 5 to 10 minutes is enough.</p>
-    </section>
-
-    <section>
-      <h2>🧴 Moisturizing Naturally</h2>
-      <p>Apply baby lotion or coconut oil after a bath while the skin is still damp to lock in moisture.</p>
-    </section>
-
-    <section>
-      <h2>💤 Better Sleep Routines</h2>
-      <p>Babies sleep best when they have a soothing bedtime routine — soft music, dim lights, and gentle cuddles.</p>
+    <section class="tip-section">
+      <h2><span>🧷</span> Baby Diaper Rash</h2>
+      <p class="content-placeholder">
+        [Add content about baby diaper rash here.]
+      </p>
     </section>
   </main>
 
