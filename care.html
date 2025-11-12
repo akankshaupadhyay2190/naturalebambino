@@ -6,9 +6,7 @@
   <title>Baby Care Tips | Naturale Bambino</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    html {
-      font-size: 20px;
-    }
+    html { font-size: 20px; }
     body {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
@@ -16,7 +14,6 @@
       background: 
         url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
         linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
-      background-attachment: fixed;
       min-height: 100vh;
     }
     header {
@@ -29,8 +26,8 @@
     header h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
-      letter-spacing: 2.5px;
       color: #b8975e;
+      letter-spacing: 2.5px;
       margin: 0 0 0.45em 0;
       font-weight: 700;
       text-shadow: 0 2px 4px #fffbe4a2;
@@ -40,8 +37,6 @@
       font-size: 2rem;
       color: #c88e4a;
       margin: 0 0 0.3em 0;
-      letter-spacing: 1px;
-      text-shadow: 0 1px 2px #fffbe4c2;
     }
     nav {
       background: #f8edc6e6;
@@ -70,64 +65,95 @@
       box-shadow: 0 2px 8px #e8c68680;
       border-color: #daba6b;
     }
+
     main {
       background: rgba(255, 251, 232, 0.96);
       margin: 2.5em auto 2em auto;
-      max-width: 900px;
+      max-width: 950px;
       box-shadow: 0 6px 36px #ecd9ac41;
       border-radius: 20px;
       padding: 3em 2em 3em 2em;
       text-align: center;
     }
-    .tip-section {
+
+    .care-tips-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.2em;
+      justify-content: center;
+      padding: 2em 0 1em 0;
+    }
+    .care-tip-card {
       background: #fff8e6bc;
-      margin: 2.6em auto 1em auto;
-      padding: 2.2em 2em 2em 2em;
+      box-shadow: 0 4px 20px #ecd9ac30;
       border-radius: 16px;
-      box-shadow: 0 2px 16px #f3e3b426;
-      max-width: 700px;
+      width: 310px;
+      max-width: 98vw;
+      margin-bottom: 1.7em;
+      transition: box-shadow 0.19s;
+      cursor: pointer;
+      border: 2px solid #f5e7bc;
       text-align: left;
     }
-    .tip-section h2 {
-      color: #b0894d;
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 0.7em;
-      font-family: 'Cormorant Garamond', serif;
+    .care-tip-card:hover, .care-tip-card.open {
+      box-shadow: 0 8px 36px #ead79366, 0 1.5px 9px #ead79333;
+      border-color: #e0be7f;
+    }
+    .tip-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 155px;
+      overflow: hidden;
+      border-radius: 16px 16px 0 0;
+      background: #fffbe4;
+    }
+    .tip-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .tip-title {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to top, #ecd9acab 75%, #ecd9ac00 100%);
+      color: #8a6627;
+      text-shadow: 0 2px 4px #ede1a966;
+      font-size: 1.33rem;
+      letter-spacing: 0.5px;
       font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.7em;
-    }
-    .tip-section img {
-  display: block;
-  margin: 0.6em auto 1.3em auto;
-  border-radius: 1em;
-  box-shadow: 0 4px 24px #e5cb9b22, 0 1.5px 4px #ead79333;
-  width: 350px;
-  height: 560px;          /* Add this line */
-  max-width: 95vw;
-  object-fit: cover;
-  border: 2px solid #ead793;
-  background: #fffbe4;
-  /* aspect-ratio: 4/3;   Remove or comment this line out */
-    }
-    .tip-section p {
-      color: #7e643c;
-      font-size: 1.22rem;
-      line-height: 1.7;
+      padding: 0.42em 1em 0.42em 1em;
       font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      margin: 0.7em 0 0.6em 0;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      text-align: center;
+      user-select: none;
+      cursor: pointer;
     }
-    @media (max-width: 970px) {
-      main { max-width: 99vw; }
-      .tip-section { max-width:96vw; }
+    .tip-content {
+      display: none;
+      padding: 1.2em 1.3em 1.5em 1.3em;
+      color: #796a4b;
+      font-size: 1.1rem;
+      border-top: 1px solid #ecd9ac;
+      animation: fadein 0.45s;
+    }
+    .care-tip-card.open .tip-content { display: block; }
+    .care-tip-card.open .tip-title {
+      background: linear-gradient(to top, #ead793 78%, #ecd9ac00 100%);
+      box-shadow: 0 2px 12px #ead79338;
+      color: #ba9235;
+    }
+    @keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+
+    @media (max-width:1100px) {
+      .care-tips-list { flex-direction: column; align-items: center; }
+      .care-tip-card { width:98vw; max-width: 480px;}
     }
     @media (max-width: 700px) {
       html { font-size: 18px; }
-      main { padding: 1em 3vw 2em 3vw; }
-      .tip-section { padding: 1.5em 2vw; }
+      main { padding: 1em 0.5em 2em 0.5em; }
+      .tip-img-wrap { height: 110px;}
       header h1 { font-size: 2rem; }
       header p { font-size: 1.15rem; }
       nav a { font-size: 1.09rem; padding: 0.7em 0.9em;}
@@ -158,38 +184,69 @@
   </nav>
 
   <main>
-    <section class="tip-section">
-      <h2>
-        <img src="images/diaper_rash.jpg" alt="Baby in diaper">
-        Baby Diaper Rash
-      </h2>
+    <div class="care-tips-list">
+      
+      <div class="care-tip-card">
+        <div class="tip-img-wrap">
+          <img src="images/diaper_rash.jpg" alt="Baby with diaper rash">
+          <div class="tip-title">Baby Diaper Rash</div>
+        </div>
+        <div class="tip-content">
+          <p>
+            Oh, diaper rash—the little red mystery that gets every parent at some point! If you’re seeing some redness, especially in the summer when our tiny ones sweat faster than you can say “ice cream truck,” you’re definitely not alone.
+          </p>
+          <p>
+            Some babies don’t even bat an eye, but others can make a <em>very</em> big fuss (and yes, sometimes it’s just as dramatic as that wrestling match you have at every diaper change). Don’t stress! A few tried-and-true tricks can make a big difference:
+          </p>
+          <ul style="margin-bottom:1em;">
+            <li><strong>Change diapers regularly:</strong> Aim for every 3–4 hours, and definitely after every poop (yes, even if it’s nap time and you’re tip-toeing like a ninja).</li>
+            <li><strong>Skip wet wipes after poop:</strong> Even if the packet claims “100% water and natural,” nothing beats lukewarm water for gentle cleaning. Soak a soft cotton cloth or baby sponge, give the area a careful wash, and pat dry with another clean cotton cloth.</li>
+            <li><strong>Let that bottom breathe:</strong> If it’s warm, give your baby a little “no diaper” time (extra towels are your best friend!).</li>
+          </ul>
+          <p>
+            And remember—every mom has a diaper rash story. So don’t worry: even the best of us have had to chase a suddenly-naked, giggling baby across the living room at bath time!
+          </p>
+        </div>
+      </div>
 
-      <p>
-        Oh, diaper rash—the little red mystery that gets every parent at some point! If you’re seeing some redness, especially in the summer when our tiny ones sweat faster than you can say “ice cream truck,” you’re definitely not alone.
-      </p>
-      <p>
-        Some babies don’t even bat an eye, but others can make a *very* big fuss (and yes, sometimes it’s just as dramatic as that wrestling match you have at every diaper change). Don’t stress! A few tried-and-true tricks can make a big difference:
-      </p>
-      <p>
-        <strong>1. Change diapers regularly:</strong> Aim for every 3–4 hours, and definitely after every poop (yes, even if it’s nap time and you’re tip-toeing like a ninja).
-      </p>
-      <p>
-        <strong>2. Skip wet wipes after poop:</strong> Even if the packet claims “100% water and natural,” nothing beats lukewarm water for gentle cleaning. Soak a soft cotton cloth or baby sponge, give the area a careful wash, and pat dry with another clean cotton cloth. No need to go fancy—a clean washcloth is the gold standard!
-      </p>
-      <p>
-        <strong>3. Let that bottom breathe:</strong> If the weather’s warm, let your baby have a little “no diaper” time (tummy time with extra towels is a life-saver). You’ll be surprised how much those cute little “airdries” can help!
-      </p>
-      <p>
-        And remember—every mom has a diaper rash story. So don’t worry and keep a sense of humor; even the best of us have had to chase a suddenly-naked, giggling baby across the living room at bath time!
-      </p>
-      <p>
-        (Stay tuned—I’ll be sharing more soothing solutions and natural gentle creams very soon.)
-      </p>
-    </section>
+      
+      <div class="care-tip-card">
+        <div class="tip-img-wrap">
+          <img src="images/bath_time.jpg" alt="Baby in the bath">
+          <div class="tip-title">Gentle Bath Time</div>
+        </div>
+        <div class="tip-content">
+          <p>
+            Bath time can be so much fun—or let’s admit it, a bit of a splashy wrestling match! Use gentle, fragrance-free soaps, and keep baths short and sweet, about 5 to 10 minutes.
+          </p>
+          <ul style="margin-bottom:1em;">
+            <li><strong>Water temperature:</strong> Lukewarm, never hot.</li>
+            <li><strong>Stay close:</strong> Never leave your little one unattended, not even for a second—kids are slippery!</li>
+            <li><strong>Wrap up:</strong> Have a cozy towel ready for some after-bath cuddles and giggles.</li>
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
   </main>
 
   <footer>
     <p>© 2025 Naturale Bambino | Nurture Naturally 🌿</p>
   </footer>
+  <script>
+    // Accordion functionality for care tips
+    document.querySelectorAll('.care-tip-card .tip-title, .care-tip-card .tip-img-wrap img').forEach(function(trigger) {
+      trigger.addEventListener('click', function(){
+        var card = this.closest('.care-tip-card');
+        // Close all others
+        document.querySelectorAll('.care-tip-card').forEach(function(c){
+          if(c !== card) c.classList.remove('open');
+        });
+        // Open/collapse clicked
+        card.classList.toggle('open');
+      });
+    });
+  </script>
 </body>
 </html>
