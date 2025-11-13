@@ -6,14 +6,15 @@
   <title>Naturale Bambino | Gentle Care for Babies</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    html { font-size: 20px; }
+    html {
+      font-size: 20px;
+    }
     body {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
       color: #725c39;
-      background: 
-        url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
-        linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
+      background: url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
+                  linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
       background-attachment: fixed;
       min-height: 100vh;
     }
@@ -77,122 +78,44 @@
       padding: 3em 2em 3em 2em;
       text-align: center;
     }
-    .collage {
+    /* ----------- GALLERY GRID ONLY ----------- */
+    .gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1em;
-      margin: 2.2em auto 2em auto;
+      margin: 2.2em auto;
       max-width: 680px;
     }
-    .collage img {
+    .gallery img {
       width: 100%;
-      aspect-ratio: 4/3;
+      height: 170px;
       object-fit: cover;
       border-radius: 1em;
-      box-shadow: 0 2px 12px #ead79322, 0 2px 6px #fffbe422;
+      box-shadow: 0 3px 14px #ead79330, 0 1.5px 5px #fffbe422;
       border: 2px solid #ead793;
       background: #fffbe4;
-      transition: transform 0.18s;
+      transition: transform 0.17s, box-shadow 0.18s;
+      display: block;
     }
-    .collage img:hover {
-      transform: scale(1.04) rotate(-1.5deg);
-      box-shadow: 0 8px 28px #ead79366;
+    .gallery img:hover {
+      transform: scale(1.045) rotate(-1.5deg);
+      box-shadow: 0 7px 18px #ead79366;
       border-color: #c8b568;
       z-index: 2;
       position: relative;
     }
-    main h2 {
-      color: #b0894d;
-      font-size: 2.4rem;
-      margin-bottom: 0.7em;
-      margin-top: 0;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 700;
-      letter-spacing: 1px;
-      line-height: 1.18;
-    }
-    main p {
-      color: #7e643c;
-      font-size: 1.25rem;
-      line-height: 1.7;
-      font-family: 'Cormorant Garamond', serif;
-      font-weight: 400;
-      margin-bottom: 1.3em;
-      margin-top: 0.3em;
-    }
-    .featured-sections {
-      margin: 3em 0 2em 0;
-      background: #fff8e6bc;
-      padding: 2.5em 2em 2em 2em;
-      border-radius: 16px;
-      box-shadow: 0 2px 16px #f3e3b426;
-      text-align: left;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .featured-sections h3 {
-      color: #b59351;
-      font-size: 1.6rem;
-      font-family: 'Cormorant Garamond', serif;
-      margin-bottom: 1.3em;
-      font-weight: bold;
-      text-align: center;
-      letter-spacing: 0.5px;
-    }
-    .featured-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.4em;
-      justify-content: center;
-      margin-top: 1.1em;
-    }
-    .featured-item {
-      flex-basis: 250px;
-      background: #fffbeace;
-      padding: 1.3em 1.2em 1.1em 1.1em;
-      border-radius: 11px;
-      box-shadow: 0 2px 12px #f3e3b426;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.9em;
-      min-width: 210px;
-    }
-    .featured-icon {
-      font-size: 2.4rem;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .featured-text {
-      font-size: 1.14rem;
-      color: #725c39;
-      font-family: 'Cormorant Garamond', serif;
-    }
-    .featured-title {
-      color: #9c7e37;
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: 0.2em;
-    }
-    @media (max-width: 970px) {
+    @media (max-width: 900px) {
+      .gallery { max-width: 95vw; }
       main { max-width: 99vw; }
-      .featured-sections { max-width:96vw; }
-      .collage { max-width:99vw; }
     }
     @media (max-width: 700px) {
       html { font-size: 18px; }
       main { padding: 1em 3vw 2em 3vw; }
-      .featured-list { flex-direction: column; align-items: stretch;}
-      .featured-item { flex-basis: unset; min-width:0;}
-      .featured-sections { padding: 1.5em 2vw; }
-      .collage {
+      .gallery {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 97vw;
         gap: 0.7em;
+        max-width: 99vw;
       }
-      header h1 { font-size: 2rem; }
-      header p { font-size: 1.2rem; }
-      nav a { font-size: 1.09rem; padding: 0.7em 0.9em;}
     }
     footer {
       background: #f8edc6e6;
@@ -221,15 +144,7 @@
   </nav>
 
   <main>
-    <h2>Welcome to Naturale Bambino</h2>
-    <p>
-      We believe in the power of nature to nurture. At Naturale Bambino, we focus
-      on sharing baby care tips, natural remedies, and products that are gentle
-      and safe for your little one.
-    </p>
-
-    
-    <div class="collage">
+    <div class="gallery">
       <img src="home1.jpg" alt="Baby Care 1">
       <img src="home2.jpg" alt="Baby Care 2">
       <img src="home3.jpg" alt="Baby Care 3">
@@ -237,7 +152,13 @@
       <img src="home5.jpg" alt="Baby Care 5">
       <img src="home6.jpg" alt="Baby Care 6">
     </div>
-    
+
+    <h2>Welcome to Naturale Bambino</h2>
+    <p>
+      We believe in the power of nature to nurture. At Naturale Bambino, we focus
+      on sharing baby care tips, natural remedies, and products that are gentle
+      and safe for your little one.
+    </p>
 
     <p>
       Explore our care tips to learn more about keeping your baby happy and healthy.
