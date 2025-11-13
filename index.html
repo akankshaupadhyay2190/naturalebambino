@@ -6,9 +6,7 @@
   <title>Naturale Bambino | Gentle Care for Babies</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    html {
-      font-size: 20px; /* Base font size (was 16px) */
-    }
+    html { font-size: 20px; }
     body {
       margin: 0;
       font-family: 'Cormorant Garamond', serif;
@@ -28,7 +26,7 @@
     }
     header h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem; /* ~56px */
+      font-size: 2.8rem;
       letter-spacing: 2.5px;
       color: #b8975e;
       margin: 0 0 0.45em 0;
@@ -73,24 +71,35 @@
     main {
       background: rgba(255, 251, 232, 0.96);
       margin: 2.5em auto 2em auto;
-      /* increased max-width for wider look */
       max-width: 900px;
       box-shadow: 0 6px 36px #ecd9ac41;
       border-radius: 20px;
       padding: 3em 2em 3em 2em;
       text-align: center;
     }
-    .baby-photo {
-      display: block;
-      margin: 1.5em auto 1.4em auto;
-      border-radius: 1.2em;
-      box-shadow: 0 6px 32px #e5cb9b38, 0 1.5px 4px #ead79344;
-      width: 240px;
-      max-width: 90vw;
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1em;
+      margin: 2.2em auto 2em auto;
+      max-width: 680px;
+    }
+    .collage img {
+      width: 100%;
       aspect-ratio: 4/3;
       object-fit: cover;
+      border-radius: 1em;
+      box-shadow: 0 2px 12px #ead79322, 0 2px 6px #fffbe422;
       border: 2px solid #ead793;
       background: #fffbe4;
+      transition: transform 0.18s;
+    }
+    .collage img:hover {
+      transform: scale(1.04) rotate(-1.5deg);
+      box-shadow: 0 8px 28px #ead79366;
+      border-color: #c8b568;
+      z-index: 2;
+      position: relative;
     }
     main h2 {
       color: #b0894d;
@@ -118,7 +127,7 @@
       border-radius: 16px;
       box-shadow: 0 2px 16px #f3e3b426;
       text-align: left;
-      max-width: 700px; /* wider than before */
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -168,6 +177,7 @@
     @media (max-width: 970px) {
       main { max-width: 99vw; }
       .featured-sections { max-width:96vw; }
+      .collage { max-width:99vw; }
     }
     @media (max-width: 700px) {
       html { font-size: 18px; }
@@ -175,7 +185,11 @@
       .featured-list { flex-direction: column; align-items: stretch;}
       .featured-item { flex-basis: unset; min-width:0;}
       .featured-sections { padding: 1.5em 2vw; }
-      .baby-photo { width: 80vw; }
+      .collage {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 97vw;
+        gap: 0.7em;
+      }
       header h1 { font-size: 2rem; }
       header p { font-size: 1.2rem; }
       nav a { font-size: 1.09rem; padding: 0.7em 0.9em;}
@@ -214,11 +228,16 @@
       and safe for your little one.
     </p>
 
-    <img
-      src="https://images.unsplash.com/photo-1589561084283-930aa7b1bebb?auto=format&fit=crop&w=400&q=80"
-      alt="A happy baby taking a bath in a white bathtub"
-      class="baby-photo"
-    />
+    
+    <div class="collage">
+      <img src="home1.jpg" alt="Baby Care 1">
+      <img src="home2.jpg" alt="Baby Care 2">
+      <img src="home3.jpg" alt="Baby Care 3">
+      <img src="home4.jpg" alt="Baby Care 4">
+      <img src="home5.jpg" alt="Baby Care 5">
+      <img src="home6.jpg" alt="Baby Care 6">
+    </div>
+    
 
     <p>
       Explore our care tips to learn more about keeping your baby happy and healthy.
