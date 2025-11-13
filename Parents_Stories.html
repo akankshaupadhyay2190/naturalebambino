@@ -4,77 +4,199 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Parent Stories | Naturale Bambino</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+    html { font-size: 20px; }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #fefcf9;
-      color: #333;
+      font-family: 'Cormorant Garamond', serif;
+      color: #725c39;
+      background: 
+        url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
+        linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
+      min-height: 100vh;
     }
     header {
-      background-color: #d2e8cf;
-      padding: 20px;
+      background: rgba(255, 251, 240, 0.93);
       text-align: center;
+      padding: 2em 0.7em 1.1em 0.7em;
+      border-bottom: 2px solid #ead793;
+      box-shadow: 0 3px 16px #ecd9ac67;
+    }
+    header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      color: #b8975e;
+      letter-spacing: 2.5px;
+      margin: 0 0 0.25em 0;
+      font-weight: 700;
+      text-shadow: 0 2px 4px #fffbe4a2;
+    }
+    header p {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #c88e4a;
+      margin: 0 0 0.3em 0;
     }
     nav {
-      background-color: #b6d7a8;
+      background: #f8edc6e6;
+      border-bottom: 1.5px solid #dbc47e;
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding: 10px 0;
+      padding: 0.85em 0;
+      gap: 2.2em;
     }
     nav a {
       text-decoration: none;
-      color: #333;
+      color: #b18037;
+      font-size: 1.25rem;
       font-weight: bold;
+      padding: 0.5em 1.4em;
+      border-radius: 6px;
+      background: #fffbea80;
+      box-shadow: 0 2px 8px #ead7931c;
+      letter-spacing: 0.5px;
+      transition: background 0.2s, color 0.19s, box-shadow 0.19s;
+      border: 1px solid #f5e7bc;
     }
     nav a:hover {
-      color: #2d572c;
+      background: #ffedbb;
+      color: #b4812e;
+      box-shadow: 0 2px 8px #e8c68680;
+      border-color: #daba6b;
     }
     main {
-      padding: 40px;
+      background: rgba(255, 251, 232, 0.96);
+      margin: 2.5em auto 2em auto;
       max-width: 900px;
-      margin: 0 auto;
+      box-shadow: 0 6px 36px #ecd9ac41;
+      border-radius: 20px;
+      padding: 3em 2em 3em 2em;
       text-align: center;
     }
-    iframe {
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      margin-top: 20px;
+    .stories-list {
+      margin: 0 auto 0 auto;
+      max-width: 700px;
+    }
+    .story {
+      background: #fff8e6bc;
+      border-radius: 14px;
+      box-shadow: 0 2px 16px #f3e3b426;
+      margin-bottom: 2em;
+      padding: 2em 2em 1.3em 2em;
+      text-align: left;
+      position: relative;
+      transition: box-shadow 0.2s;
+    }
+    .story:hover {
+      box-shadow: 0 6px 42px #e8d7a880, 0 1.5px 12px #ead79322;
+    }
+    .story::before {
+      content: "“";
+      font-size: 2.7rem;
+      position: absolute;
+      left: 20px;
+      top: 24px;
+      color: #ecd9ac;
+      font-family: serif;
+      line-height: 1;
+      opacity: 0.5;
+    }
+    .story-text {
+      color: #7e643c;
+      font-size: 1.22rem;
+      font-family: 'Cormorant Garamond', serif;
+      margin-left: 1.4em;
+      margin-right: 1em;
+      margin-top: 0;
+      margin-bottom: 1.1em;
+      text-align: left;
+    }
+    .story .author {
+      display: block;
+      color: #b8975e;
+      font-size: 1.02rem;
+      margin-left: 1.5em;
+      font-family: 'Cormorant Garamond', serif;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3em;
+    }
+    @media (max-width: 700px) {
+      html { font-size: 18px; }
+      main { padding: 1em 3vw 2em 3vw; }
+      .stories-list { padding: 0; }
+      .story, .stories-list { max-width: 99vw; padding: 1em 0.8em 0.2em 1em;}
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1.15rem; }
+      nav a { font-size: 1.09rem; padding: 0.7em 0.9em;}
     }
     footer {
-      background-color: #d2e8cf;
+      background: #f8edc6e6;
       text-align: center;
-      padding: 15px;
-      position: relative;
-      bottom: 0;
-      width: 100%;
+      padding: 1.1em 0 0.6em 0;
+      font-family: 'Cormorant Garamond', serif;
+      color: #a98a50;
+      font-size: 1.05rem;
+      border-top: 1.5px solid #ead793;
+      letter-spacing: 0.5px;
+      margin-top: 2.2em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🌼 Parents Stories 🌼</h1>
-    <p>Share your baby experiences and favorite products with other loving parents</p>
+    <h1>🌼 Parent Stories 🌼</h1>
+    <p>Real feelings, funny fails, and gentle wins from parents just like you</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="care.html">Care Tips</a>
-    <a href="community.html">Parent Stories</a>
+    <a href="Parents_Stories.html">Parent Stories</a>
+    <a href="author.html">Author's Inspiration</a>
   </nav>
 
   <main>
-    <h2>💬 Share Your Baby Experience</h2>
-    <p>Parents from all over the world are sharing their favorite baby products and stories!</p>
-  
-    <!-- 🧩 Replace the link below with your own Google Form embed URL -->
+    <h2 style="color: #b0894d; margin-bottom: 2em;">Shared by Our Community</h2>
+    <div class="stories-list">
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSceGVB8kQSTrALXa4_-MZCS-uJKwQiX3Ec3Q1jPk8D7wAGNHg/viewform?embedded=true" 
-      width="640" height="856" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    
-    Loading…      
-    </iframe>
+      <div class="story">
+        <p class="story-text">
+          The calendula balm recipe from Naturale Bambino was a total game-changer for my daughter's sensitive skin! It's now a must-have in our bathroom. Thank you for sharing such gentle, natural tips—I'm finally seeing those chubby cheeks smile again! 🌼
+        </p>
+        <span class="author">— Maira (mom to Leena, 7 months, Bangalore)</span>
+      </div>
+
+      <div class="story">
+        <p class="story-text">
+          I used to feel so lost about bedtime routines—my twins would invent every excuse not to sleep (including "I'm a tiny dinosaur!"). The gentle routine ideas here actually worked. We even do the lavender massage now—bedtime is ALMOST relaxing!
+        </p>
+        <span class="author">— Olivia P. (twin mom, Canada)</span>
+      </div>
+      
+      <div class="story">
+        <p class="story-text">
+          My baby had the worst diaper rash in the summer heat, but washing with warm water, drying with a soft cloth, and letting her airdry (even for 5 minutes) made such a difference. Thank you for making these things feel simple—not scary.
+        </p>
+        <span class="author">— Shilpa & baby Fatima (Dubai)</span>
+      </div>
+
+      <div class="story">
+        <p class="story-text">
+          The breastfeeding snacks list was hilarious AND helpful. Fennel cookies are now my "mom hack" for late-night feeds (and I swear they're helping!). Thanks for making motherhood lighter with a dash of humor!
+        </p>
+        <span class="author">— Jane L. (first baby, London)</span>
+      </div>
+
+      <div class="story">
+        <p class="story-text">
+          I shared my story on Naturale Bambino and reading others' wins and worries reminds me that every parent is figuring it out along the way. Thank you for giving parents a cozy place to feel understood!
+        </p>
+        <span class="author">— Miguel D. (dad of two, Texas)</span>
+      </div>
+
+      
+    </div>
   </main>
 
   <footer>
