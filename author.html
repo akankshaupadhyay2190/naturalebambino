@@ -81,17 +81,36 @@
       box-shadow: 0 2px 16px #f3e3b426;
       margin-bottom: 1.7em;
     }
+    /* Blurred border wrapper effect */
+    .blur-img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2em;
+      width: 150px;
+      height: 500px;
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .author-img {
-      display: block;
-      margin: 1em auto 2em auto;
+      width: 150px;
+      height: 500px;
       border-radius: 1em;
-      width: 200px;
-      height: 300px;
-      max-width: 35vw;
       object-fit: cover;
       border: 2px solid #ead793;
       background: #fffbe4;
       box-shadow: 0 4px 16px #ecd9ac30;
+      z-index: 1;
+      position: relative;
+    }
+    .blur-img-wrapper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 1em;
+      box-shadow: 0 0 0 12px #f9eddcbb, 0 0 54px 24px #f9eddc80;
+      pointer-events: none; z-index: 2;
     }
     .author-block h2 {
       color: #b0894d;
@@ -114,7 +133,7 @@
       html { font-size: 18px; }
       main { padding: 1.2em 5vw 1.3em 5vw; }
       .author-block { padding: 1.2em 0.6em; }
-      .author-img { width:90px; }
+      .blur-img-wrapper, .author-img { width:90px; height:180px;}
       header h1 { font-size: 2rem; }
       header p { font-size: 1.2rem; }
       nav a { font-size: 1.05rem; padding: 0.7em 0.9em;}
@@ -147,9 +166,9 @@
 
   <main>
     <section class="author-block">
-      
-      <img src="images/author.jpeg" alt="Author's Photo" class="author-img">
-      
+      <div class="blur-img-wrapper">
+        <img src="images/author.jpeg" alt="Author's Photo" class="author-img">
+      </div>
       <h2>From One New Mom to Another…</h2>
       <p>
         Naturale Bambino was never a polished plan or a brand—it was just a flurry of late-night notes and ideas scribbled on the back of receipts between feedings and diaper changes. After bringing my little one home, I realized nobody really tells you just how many questions pop up after birth—not just about the baby, but about yourself.
@@ -162,7 +181,7 @@
       </p>
       <p style="font-size:1.1rem; color: #b59351; margin-top: 2em;">
         With warmth and wonder,<br>
-        <strong>Akanksha Upadhyay</strong>
+        <strong>[Your Name]</strong>
       </p>
     </section>
   </main>
