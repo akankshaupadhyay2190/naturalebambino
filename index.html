@@ -4,73 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Felice Bambino | Gentle Care for Babies</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Baby‑friendly fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Comfortaa:wght@400;600;700&display=swap" rel="stylesheet">
+
   <style>
     html {
       font-size: 20px;
     }
+
     body {
       margin: 0;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Quicksand', 'Comfortaa', sans-serif;
       color: #725c39;
-      background: url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-floral.png') repeat,
-                  linear-gradient(0deg, #f9eddc 70%, #f8eab0 100%);
-      background-attachment: fixed;
+      background: #ffffff;
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/small-floral.png');
+      background-size: 250px;
+      background-repeat: repeat;
       min-height: 100vh;
     }
+
     header {
-      background: rgba(255, 251, 240, 0.93);
+      background: rgba(255, 255, 255, 0.95);
       text-align: center;
       padding: 2.1em 0.7em 1.1em 0.7em;
       border-bottom: 2px solid #ead793;
       box-shadow: 0 3px 16px #ecd9ac67;
     }
+
     header h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
-      letter-spacing: 2.5px;
+      font-family: 'Comfortaa', cursive;
+      font-size: 2.6rem;
+      letter-spacing: 1.5px;
       color: #b8975e;
       margin: 0 0 0.45em 0;
       font-weight: 700;
-      text-shadow: 0 2px 4px #fffbe4a2;
     }
+
     header p {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2rem;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.4rem;
       color: #c88e4a;
       margin: 0 0 0.3em 0;
-      letter-spacing: 1px;
-      text-shadow: 0 1px 2px #fffbe4c2;
     }
+
     nav {
-      background: #f8edc6e6;
+      background: #fff7dd;
       border-bottom: 1.5px solid #dbc47e;
       display: flex;
       justify-content: center;
       padding: 0.85em 0;
       gap: 2.2em;
     }
+
     nav a {
       text-decoration: none;
       color: #b18037;
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: bold;
       padding: 0.5em 1.4em;
-      border-radius: 6px;
-      background: #fffbea80;
+      border-radius: 10px;
+      background: #ffffff;
       box-shadow: 0 2px 8px #ead7931c;
-      letter-spacing: 0.5px;
       transition: background 0.2s, color 0.19s, box-shadow 0.19s;
-      border: 1px solid #f5e7bc;
+      border: 1px solid #f1deb0;
     }
+
     nav a:hover {
-      background: #ffedbb;
+      background: #ffeebf;
       color: #b4812e;
       box-shadow: 0 2px 8px #e8c68680;
-      border-color: #daba6b;
     }
+
     main {
-      background: rgba(255, 251, 232, 0.96);
+      background: rgba(255, 255, 255, 0.96);
       margin: 2.5em auto 2em auto;
       max-width: 900px;
       box-shadow: 0 6px 36px #ecd9ac41;
@@ -78,56 +85,56 @@
       padding: 3em 2em 3em 2em;
       text-align: center;
     }
-    /* ----------- GALLERY GRID ONLY ----------- */
-    .gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0; /* No gap at all */
-  margin: 2.2em auto;
-  max-width: 680px;
-  overflow: hidden;
-  border-radius: 1.5em; /* Softens the gallery as a whole */
-  box-shadow: 0 3px 20px #ead79326;
-}
-.gallery img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  /* Remove border, keep very soft effect */
-  border: none;
-  background: #fefcf9;
-  box-shadow: none;
-  border-radius: 0; /* Remove per-image corner rounding, will look like one piece */
-  display: block;
-  transition: transform 0.16s;
-}
-.gallery img:hover {
-  transform: scale(1.035) rotate(-2deg) !important;
-  z-index: 2;
-  position: relative;
-}
-@media (max-width: 900px) {
-  .gallery { max-width: 95vw; }
-  main { max-width: 99vw; }
-}
-@media (max-width: 700px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }
-}
 
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin: 2.2em auto;
+      max-width: 680px;
+      overflow: hidden;
+      border-radius: 1.5em;
+      box-shadow: 0 3px 20px #ead79326;
     }
+
+    .gallery img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border: none;
+      background: #fefcf9;
+      display: block;
+      transition: transform 0.16s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.035) rotate(-2deg) !important;
+      z-index: 2;
+      position: relative;
+    }
+
+    @media (max-width: 900px) {
+      .gallery { max-width: 95vw; }
+      main { max-width: 99vw; }
+    }
+
+    @media (max-width: 700px) {
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+
     footer {
-      background: #f8edc6e6;
+      background: #fff7dd;
       text-align: center;
       padding: 1.1em 0 0.6em 0;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Quicksand', serif;
       color: #a98a50;
       font-size: 1.05rem;
       border-top: 1.5px solid #ead793;
-      letter-spacing: 0.5px;
       margin-top: 2.2em;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>🌼 Felice Bambino 🌼</h1>
@@ -142,63 +149,27 @@
   </nav>
 
   <main>
-  <h2>Welcome to Felice Bambino</h2>
-  <p>
-    We believe in the power of nature to nurture. At Felice Bambino, we focus
-    on sharing baby care tips, natural remedies, and products that are gentle
-    and safe for your little one.
-  </p>
+    <h2>Welcome to Felice Bambino</h2>
+    <p>
+      We believe in the power of nature to nurture. At Felice Bambino, we share baby care tips,
+      natural remedies, and gentle advice for your little one.
+    </p>
 
-  <div class="gallery">
-    <img src="images/home1.jpg" alt="">
-    <img src="images/home2.jpg" alt="">
-    <img src="images/home3.jpg" alt="">
-    <img src="images/home4.jpg" alt="">
-    <img src="images/home5.jpg" alt="">
-    <img src="images/home6.jpg" alt="">
-  </div>
+    <div class="gallery">
+      <img src="images/home1.jpg" alt="">
+      <img src="images/home2.jpg" alt="">
+      <img src="images/home3.jpg" alt="">
+      <img src="images/home4.jpg" alt="">
+      <img src="images/home5.jpg" alt="">
+      <img src="images/home6.jpg" alt="">
+    </div>
 
-  <p>
-    Explore our care tips to learn more about keeping your baby happy and healthy.
-  </p>
-
-
-    <section class="featured-sections">
-      <h3>What You'll Find Here</h3>
-      <div class="featured-list">
-        <div class="featured-item">
-          <span class="featured-icon">🍼</span>
-          <div class="featured-text">
-            <div class="featured-title">Gentle Routines</div>
-            Reliable everyday habits for peaceful, healthy development.
-          </div>
-        </div>
-        <div class="featured-item">
-          <span class="featured-icon">🌿</span>
-          <div class="featured-text">
-            <div class="featured-title">Natural Remedies</div>
-            Safe herbal tips, soothers, and remedies for common concerns.
-          </div>
-        </div>
-        <div class="featured-item">
-          <span class="featured-icon">🤱</span>
-          <div class="featured-text">
-            <div class="featured-title">Parent Stories</div>
-            Heartfelt journeys and real-life experiences from parents.
-          </div>
-        </div>
-        <div class="featured-item">
-          <span class="featured-icon">💬</span>
-          <div class="featured-text">
-            <div class="featured-title">Emotional Support</div>
-            Encouragement, empathy, and community for your parenting path.
-          </div>
-        </div>
-      </div>
-    </section>
+    <p>
+      Explore our care tips to learn more about keeping your baby happy and healthy.
+    </p>
   </main>
 
-  <<footer>
+  <footer>
     <p>© 2025 Felice Bambino | Sharing Love & Care 🌿</p>
   </footer>
 </body>
